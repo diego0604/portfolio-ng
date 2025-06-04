@@ -1,0 +1,35 @@
+/* footer.component.scss */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-content {
+  @apply flex flex-col md:flex-row justify-between items-start gap-8 mb-6;
+}
+
+.footer-logo h2 {
+  @apply text-2xl font-bold;
+}
+
+.footer-logo span {
+  @apply text-[var(--mountain-blue)];
+}
+
+.footer-links ul li a {
+  @apply text-gray-300 hover:text-[var(--mountain-light)] transition;
+}
+
+.footer-social .social-icons a {
+  @apply w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition;
+}
+
+.footer-bottom {
+  @apply text-center border-t border-gray-700 pt-4;
+}
+
+.footer-bottom p {
+  @apply text-gray-400;
+}

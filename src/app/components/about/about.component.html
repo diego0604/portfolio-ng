@@ -1,0 +1,66 @@
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+      <h2 class="gradient-text">About Me</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="about-content">
+      <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+        <div class="bordered-image">
+          <img [src]="imagePath" [alt]="fullName" />
+        </div>
+      </div>
+
+      <article class="about-text" data-aos="fade-left" data-aos-duration="1000">
+        <h3>Who am I?</h3>
+        <p>
+          I'm a passionate Full Stack Developer with a strong foundation in web technologies and a keen eye for creating engaging user experiences.
+          With expertise in both front-end and back-end development, I enjoy building complete, scalable applications that solve real-world problems.
+        </p>
+
+        <h3>My Journey</h3>
+        <p>
+          My journey in software development began with a curiosity about how websites work. This curiosity evolved into a passion
+          for creating digital solutions that make a difference. Over the years, I've honed my skills through continuous 
+          learning and hands-on experience with various projects.
+        </p>
+
+        <h3>My Approach</h3>
+        <p>
+          I believe in writing clean, maintainable code and following best practices.
+          I'm committed to staying updated with the latest technologies and methodologies
+          to deliver high-quality solutions that exceed expectations.
+        </p>
+
+        <div class="personal-info">
+          <div class="info-item">
+            <span>Name:</span>
+            <p>{{ fullName }}</p>
+          </div>
+          <div class="info-item">
+            <span>Email:</span>
+            <p><a [href]="'mailto:' + email">{{ email }}</a></p>
+          </div>
+          <div class="info-item">
+            <span>Location:</span>
+            <p>{{ location }}</p>
+          </div>
+          <div class="info-item">
+            <span>Availability:</span>
+            <p>{{ availability }}</p>
+          </div>
+        </div>
+
+        <button
+          pButton
+          type="button"
+          class="btn btn-primary mt-4"
+          label="Download CV"
+          icon="pi pi-download"
+          (click)="onDownloadCV()"
+        ></button>
+      </article>
+    </div>
+  </div>
+</section>

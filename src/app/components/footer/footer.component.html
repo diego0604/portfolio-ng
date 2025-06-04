@@ -1,0 +1,48 @@
+<!-- footer.component.html -->
+
+<footer role="contentinfo" class="bg-[var(--dark-color)] text-white py-8">
+  <div class="container mx-auto px-4">
+    <div class="footer-content flex flex-col md:flex-row justify-between items-start gap-8 mb-6">
+      <div class="footer-logo">
+        <h2 class="text-2xl font-bold">Diego<span class="text-[var(--mountain-blue)]">SR</span></h2>
+        <p class="mt-1 text-gray-300">Full Stack Developer</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+        <ul class="space-y-1">
+          <li><a href="#home" class="hover:text-[var(--mountain-light)] transition">Home</a></li>
+          <li><a href="#about" class="hover:text-[var(--mountain-light)] transition">About</a></li>
+          <li><a href="#skills" class="hover:text-[var(--mountain-light)] transition">Skills</a></li>
+          <li><a href="#projects" class="hover:text-[var(--mountain-light)] transition">Projects</a></li>
+          <li><a href="#contact" class="hover:text-[var(--mountain-light)] transition">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h3 class="text-xl font-semibold mb-2">Connect With Me</h3>
+        <div class="social-icons flex space-x-4">
+          <a
+            [href]="githubUrl"
+            target="_blank"
+            rel="noopener"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition"
+            aria-label="GitHub Profile"
+          >
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a
+            [href]="twitterUrl"
+            target="_blank"
+            rel="noopener"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition"
+            aria-label="Twitter Profile"
+          >
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center border-t border-gray-700 pt-4">
+      <p class="text-gray-400">&copy; {{ year }} Diego Alejandro Salazar Ramirez. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>

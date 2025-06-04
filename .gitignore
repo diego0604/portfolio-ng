@@ -1,0 +1,29 @@
+/node_modules
+/dist
+/tmp
+/out-tsc
+/bazel-out
+/.angular/cache
+
+# IDEs and editors
+.idea/
+/.vscode/
+/.settings/
+/*.sublime-workspace
+
+# Compiled output
+/tmp
+/out-tsc
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+
+# Testing
+/coverage
+
+# Misc
+.DS_Store
+Thumbs.db
+.sass-cache/
+.history/

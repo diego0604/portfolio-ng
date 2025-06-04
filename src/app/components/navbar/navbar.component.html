@@ -1,0 +1,53 @@
+<header role="banner">
+  <div class="container">
+    <div class="logo">
+      <h1>Diego<span>SR</span></h1>
+    </div>
+
+    <nav role="navigation" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button
+          pButton
+          type="button"
+          icon="pi pi-moon"
+          class="theme-toggle theme-toggle-mobile p-button-rounded p-button-text"
+          aria-label="Toggle dark mode"
+          (click)="toggleTheme()"
+        ></button>
+
+        <button
+          pButton
+          type="button"
+          icon="pi pi-bars"
+          class="hamburger p-button-rounded p-button-text"
+          aria-label="Toggle menu"
+          (click)="toggleMobileMenu()"
+        ></button>
+      </div>
+    </nav>
+
+<button
+  pButton
+  type="button"
+  class="theme-toggle"
+  (click)="toggleTheme()"
+  [icon]="darkMode ? 'pi pi-sun' : 'pi pi-moon'"
+  [class]="{
+    'bg-[var(--mountain-blue)] text-white': darkMode,
+    'bg-gray-100 text-[var(--dark-color)]': !darkMode
+  }"
+  [style.borderRadius]="'50%'"
+  [style.width.px]="40"
+  [style.height.px]="40"
+  [style.transition]="'all 0.3s ease'"
+></button>
+  </div>
+</header>

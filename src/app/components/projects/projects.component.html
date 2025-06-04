@@ -1,0 +1,53 @@
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="gradient-text">Projects</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="project-filters" data-aos="fade-up" data-aos-duration="1000">
+        <button
+    *ngFor="let filter of filters"
+    pButton
+    [label]="filter | titlecase"
+    (click)="setFilter(filter)"
+    [class]="[
+      'px-5 py-2 text-sm font-medium rounded-full border transition-all duration-200',
+      activeFilter === filter
+        ? 'bg-gradient-to-r from-blue-600 to-blue-800 text-white border-transparent shadow-md hover:shadow-lg'
+        : 'bg-white text-gray-800 dark:bg-dark-card dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800'
+    ]"
+  ></button>
+        </div>
+
+        <div class="projects-grid" data-aos="fade-up" data-aos-duration="1000">
+            <ng-container *ngFor="let project of projects">
+                <p-card *ngIf="isVisible(project)" class="project-card" [style]="{ 'overflow': 'hidden' }">
+
+                    <ng-template pTemplate="header">
+                        <div class="project-img">
+                            <img [src]="project.image" [alt]="project.title" />
+                        </div>
+                    </ng-template>
+
+                    <div class="project-info">
+                        <h3>{{ project.title }}</h3>
+                        <p>{{ project.description }}</p>
+
+                        <div class="project-tech">
+                            <span *ngFor="let tech of project.tech" class="tech-pill">
+                                {{ tech }}
+                            </span>
+                        </div>
+
+                        <div class="project-links" *ngIf="project.link">
+                            <a [href]="project.link" target="_blank" pButton class="btn btn-sm btn-primary">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </p-card>
+            </ng-container>
+        </div>
+    </div>
+</section>
